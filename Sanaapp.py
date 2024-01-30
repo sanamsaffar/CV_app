@@ -11,7 +11,7 @@ def create_cv():
 
     # Personal Information
     with st.beta_expander("Personal Information"):
-        col1, col2, col3, col4 = st.columns([1, 1, 1, 2])
+        col1, col2, col3, col4 = st.beta_columns([1, 1, 1, 2])
         with col1:
             first_name = st.text_input("First Name")
         with col2:
@@ -23,7 +23,7 @@ def create_cv():
 
     # Education
     with st.beta_expander("Education"):
-        col1, col2, col3, col4 = st.columns([1, 1, 1, 2])
+        col1, col2, col3, col4 = st.beta_columns([1, 1, 1, 2])
         with col1:
             degree = st.text_input("Degree")
         with col2:
@@ -35,7 +35,7 @@ def create_cv():
 
     # Work Experience
     with st.beta_expander("Work Experience"):
-        col1, col2, col3, col4 = st.columns([1, 1, 1, 2])
+        col1, col2, col3, col4 = st.beta_columns([1, 1, 1, 2])
         with col1:
             job_title = st.text_input("Job Title")
         with col2:
@@ -52,7 +52,7 @@ def create_cv():
 
     # Projects
     with st.beta_expander("Projects"):
-        col1, col2 = st.columns([1, 2])
+        col1, col2 = st.beta_columns([1, 2])
         with col1:
             project_name = st.text_input("Project Name")
         with col2:
@@ -84,4 +84,4 @@ def create_cv():
     st.write(f"**Description:** {project_description}")
 
 if __name__ == '__main__':
-  create_cv()
+    create_cv()
