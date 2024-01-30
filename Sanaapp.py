@@ -10,7 +10,8 @@ def create_cv():
     st.title("Curriculum Vitae (CV) Creator")
 
     # Personal Information
-    with st.beta_expander("Personal Information"):
+    personal_expander = st.beta_expander("Personal Information")
+    with personal_expander:
         col1, col2, col3, col4 = st.beta_columns([1, 1, 1, 2])
         with col1:
             first_name = st.text_input("First Name")
@@ -22,7 +23,8 @@ def create_cv():
             phone = st.text_input("Phone Number")
 
     # Education
-    with st.beta_expander("Education"):
+    education_expander = st.beta_expander("Education")
+    with education_expander:
         col1, col2, col3, col4 = st.beta_columns([1, 1, 1, 2])
         with col1:
             degree = st.text_input("Degree")
@@ -34,7 +36,8 @@ def create_cv():
             graduation_year = st.text_input("Graduation Year")
 
     # Work Experience
-    with st.beta_expander("Work Experience"):
+    work_expander = st.beta_expander("Work Experience")
+    with work_expander:
         col1, col2, col3, col4 = st.beta_columns([1, 1, 1, 2])
         with col1:
             job_title = st.text_input("Job Title")
@@ -47,11 +50,13 @@ def create_cv():
         job_description = st.text_area("Job Description")
 
     # Skills
-    with st.beta_expander("Skills"):
+    skills_expander = st.beta_expander("Skills")
+    with skills_expander:
         skills = st.text_area("List of Skills (comma-separated)")
 
     # Projects
-    with st.beta_expander("Projects"):
+    projects_expander = st.beta_expander("Projects")
+    with projects_expander:
         col1, col2 = st.beta_columns([1, 2])
         with col1:
             project_name = st.text_input("Project Name")
